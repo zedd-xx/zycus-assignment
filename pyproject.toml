@@ -1,0 +1,12 @@
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+extend-exclude = ["erp.py"]  # the sealed oracle is not ours to format
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
